@@ -1,0 +1,12 @@
+# Node.js
+/node_modules/
+
+# TypeScript
+/lib/
+
+# oclif
+/oclif.manifest.json
+
+# Salesforce DX
+/.sfdx/
+/.sf/

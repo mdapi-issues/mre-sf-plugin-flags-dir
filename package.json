@@ -1,0 +1,44 @@
+{
+  "name": "mre-sf-plugin-flags-dir",
+  "version": "0.0.0-development",
+  "keywords": [
+    "sfdx-plugin",
+    "sf-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdapi-issues/mre-sf-plugin-flags-dir.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "/bin/run.js",
+    "/lib",
+    "/oclif.manifest.json"
+  ],
+  "scripts": {
+    "build": "rm -rf lib && tsc -p . && oclif manifest",
+    "prepack": "npm run build",
+    "prepare": "npm run build",
+    "test": "tsc -p test && mocha \"test/**/*.test.ts\""
+  },
+  "mocha": {
+    "loader": "ts-node/esm",
+    "no-warnings": "ExperimentalWarning"
+  },
+  "oclif": {
+    "additionalHelpFlags": [
+      "-h"
+    ],
+    "bin": "sf",
+    "commands": "./lib/commands",
+    "topicSeparator": " "
+  },
+  "dependencies": {
+    "@salesforce/sf-plugins-core": "12.2.6"
+  },
+  "devDependencies": {
+    "@salesforce/dev-scripts": "11.0.4",
+    "oclif": "4.22.70"
+  }
+}
