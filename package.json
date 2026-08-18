@@ -35,7 +35,7 @@
     "topicSeparator": " "
   },
   "dependencies": {
-    "@salesforce/sf-plugins-core": "12.2.26"
+    "@salesforce/sf-plugins-core": "13.0.0"
   },
   "devDependencies": {
     "@salesforce/dev-scripts": "13.0.2",
